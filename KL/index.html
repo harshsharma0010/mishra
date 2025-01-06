@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Mishra | Data Scientist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Three.js and GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r159/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-line-mask">
+                <div class="loader-line"></div>
+            </div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="webgl-background"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-logo">
+            <div class="logo-text">LM</div>
+            <div class="logo-dot"></div>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch-text">Lakshya Mishra</h1>
+                <div class="title-container">
+                    <span class="title">Data Scientist</span>
+                    <span class="title">ML Engineer</span>
+                    <span class="title">AI Researcher</span>
+                </div>
+                <p class="typing-text"></p>
+            </div>
+            <div class="hero-cta">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#projects" class="btn secondary">View Projects</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/lakshya.png" alt="Lakshya Mishra" class="profile-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/lakshya-mishra-137496131/" target="_blank" class="social-link linkedin" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://web.snapchat.com/41675ede-ff7f-5f01-b5ab-7ad64be1fda7" target="_blank" class="social-link snapchat" aria-label="Snapchat Profile">
+                            <i class="fab fa-snapchat-ghost"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mishra._.laksh/" target="_blank" class="social-link instagram" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Hi, I'm Lakshya Mishra</h3>
+                    <p class="lead">A passionate developer crafting digital experiences</p>
+                    <p class="about-description">I specialize in creating beautiful and functional web applications that leave a lasting impression. With a keen eye for design and strong technical skills, I bring ideas to life through clean code and creative solutions.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-container">
+                <!-- Programming Skills -->
+                <div class="skills-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="95">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">R</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="85">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="90">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Learning Skills -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TensorFlow</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="92">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PyTorch</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="88">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Scikit-learn</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="95">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science Skills -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Science</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Analysis</span>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="94">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Visualization</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="85">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Statistics</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="90">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-subtitle">Showcasing My Best Work</div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="images/ai.webp" alt="AI Project">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" aria-label="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">AI-Powered Analytics Dashboard</h3>
+                            <p class="project-description">Real-time analytics dashboard using Python and React for predictive modeling of customer behavior.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">ML</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="images/b.webp" alt="Blockchain Project">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" aria-label="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Blockchain Trading Platform</h3>
+                            <p class="project-description">Decentralized trading platform with real-time market data and automated smart contracts.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Solidity</span>
+                                <span class="tech-tag">Web3.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="images/ar.webp" alt="AR Project">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" aria-label="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">AR Shopping Experience</h3>
+                            <p class="project-description">Augmented reality app for virtual try-ons and immersive shopping experiences.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">ARKit</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-cta">
+                <a href="#" class="view-all-btn">
+                    View All Projects
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Work Experience</h2>
+                <p>My professional journey in Financial Crime Prevention</p>
+            </div>
+
+            <div class="experience-grid">
+                <!-- AML/KYC Card -->
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="exp-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>AML/KYC Specialist</h3>
+                            <p class="company">Financial Intelligence Unit</p>
+                            <div class="exp-tags">
+                                <span>Risk Assessment</span>
+                                <span>Due Diligence</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <ul class="exp-details">
+                                <li><i class="fas fa-check"></i>Conducted comprehensive AML/KYC investigations</li>
+                                <li><i class="fas fa-check"></i>Implemented risk-based approach</li>
+                                <li><i class="fas fa-check"></i>Enhanced customer screening process</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDD/CDD Card -->
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="exp-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h3>Due Diligence Expert</h3>
+                            <p class="company">Compliance Department</p>
+                            <div class="exp-tags">
+                                <span>EDD</span>
+                                <span>CDD</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <ul class="exp-details">
+                                <li><i class="fas fa-check"></i>Enhanced Due Diligence for high-risk clients</li>
+                                <li><i class="fas fa-check"></i>Customer Due Diligence procedures</li>
+                                <li><i class="fas fa-check"></i>Risk profiling and assessment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transaction Monitoring Card -->
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="exp-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Transaction Analyst</h3>
+                            <p class="company">Monitoring Team</p>
+                            <div class="exp-tags">
+                                <span>Real-time Monitoring</span>
+                                <span>Analytics</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <ul class="exp-details">
+                                <li><i class="fas fa-check"></i>Real-time transaction monitoring</li>
+                                <li><i class="fas fa-check"></i>Suspicious activity detection</li>
+                                <li><i class="fas fa-check"></i>Pattern analysis and reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sanctions Screening Card -->
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="exp-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>Sanctions Expert</h3>
+                            <p class="company">Global Compliance</p>
+                            <div class="exp-tags">
+                                <span>Screening</span>
+                                <span>Compliance</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <ul class="exp-details">
+                                <li><i class="fas fa-check"></i>Global sanctions screening</li>
+                                <li><i class="fas fa-check"></i>Regulatory compliance</li>
+                                <li><i class="fas fa-check"></i>Watch list management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header glass">
+            <h2>Get in Touch</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info glass">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:contact@example.com">contact@example.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>Gurugram, Haryana, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="contact-details">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/lakshya-mishra-137496131/" target="_blank">Connect with me</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <div class="contact-details">
+                        <h3>Instagram</h3>
+                        <a href="https://www.instagram.com/mishra._.laksh/" target="_blank">Follow me on Instagram</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-snapchat-ghost"></i>
+                    <div class="contact-details">
+                        <h3>Snapchat</h3>
+                        <a href="https://web.snapchat.com/41675ede-ff7f-5f01-b5ab-7ad64be1fda7" target="_blank">Add me on Snapchat</a>
+                    </div>
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form glass">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                    <div class="line"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                    <div class="line"></div>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Your Message</label>
+                    <div class="line"></div>
+                </div>
+                <button type="submit" class="btn primary">
+                    <span>Send Message</span>
+                    <div class="btn-bg"></div>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="glass">
+        <div class="footer-content">
+            <p>&copy; 2025 Lakshya Mishra. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/lakshya-mishra-137496131/" target="_blank" class="social-link linkedin" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://web.snapchat.com/41675ede-ff7f-5f01-b5ab-7ad64be1fda7" target="_blank" class="social-link snapchat" aria-label="Snapchat Profile">
+                    <i class="fab fa-snapchat-ghost"></i>
+                </a>
+                <a href="https://www.instagram.com/mishra._.laksh/" target="_blank" class="social-link instagram" aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#2563eb' },
+                shape: { type: 'circle' },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    animation: { enable: true, speed: 1, minimumValue: 0.1, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: { enable: true, speed: 2, minimumValue: 0.1, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#2563eb',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    outMode: 'bounce'
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+    <script src="js/three-background.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
